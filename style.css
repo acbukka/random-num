@@ -158,6 +158,31 @@ body {
   text-align: center;
   margin-bottom: 25px;
 }
+.number__items {
+  position: relative;
+}
+.left-arrow,
+.right-arrow {
+  width: 60px;
+  height: 60px;
+  border: none;
+  position: absolute;
+  top: 10%;
+  color: #eee;
+  background-color: transparent;
+  cursor: pointer;
+}
+.left-arrow {
+  left: -70px;
+}
+.right-arrow {
+  right: -56px;
+}
+.left-arrow__img polygon,
+.right-arrow__img polygon {
+  color: #eee;
+  fill: #eee;
+}
 .check-btn {
   background-color: #eee;
   color: #222;
@@ -193,6 +218,14 @@ body {
 .highscore {
   position: relative;
 }
+.fa-caret-right {
+  background-color: #fff;
+  color: #eee;
+}
+.number__items {
+  display: flex;
+}
+
 @media (max-width: 1080px) {
   .info-box {
     width: 760px;
@@ -224,16 +257,23 @@ body {
 }
 @media (max-width: 630px) {
   .info-box {
-    /* width: 600px; */
     margin-left: 0px;
   }
-}
-@media (max-width: 560px) {
-  .info-box {
-    width: 500px;
+  .input-number {
+    font-size: 30px;
+    padding: 34px 10px;
+  }
+  .left-arrow,
+  .right-arrow {
+    top: 7%;
   }
   .result-info {
     font-size: 19px;
+  }
+}
+@media (max-width: 580px) {
+  .info-box {
+    width: 500px;
   }
 }
 @media (max-width: 530px) {

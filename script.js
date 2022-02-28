@@ -1,6 +1,8 @@
 let currentRandom = Math.trunc(Math.random() * 25);
 let writed = document.querySelector('.number');
 let body = document.body;
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
 const checkBtn = document.querySelector('.check-btn');
 const againBtn = document.querySelector('.again-btn');
 const message = document.querySelector('.message-text');
@@ -9,6 +11,7 @@ let score = document.querySelector('.score');
 let highscore = document.querySelector('.highscore-num');
 let scoreNum = document.querySelector('.score-number');
 let scoreSpan = document.querySelector('.score-span');
+let enterNumber = document.querySelector('.input-number');
 
 let currentScore = 25;
 let currentNumber = 0;
@@ -16,7 +19,7 @@ let highscoreNum = 0;
 console.log(currentRandom);
 
 checkBtn.addEventListener('click', () => {
-  let enterNumber = +document.querySelector('.input-number').value;
+  enterNumber = +document.querySelector('.input-number').value;
   writed.innerHTML = enterNumber;
   currentNumber = enterNumber;
   if (currentNumber === currentRandom) {
@@ -52,6 +55,26 @@ againBtn.addEventListener('click', () => {
   currentScore = 25;
   scoreNum.innerHTML = currentScore;
   currentRandom = Math.trunc(Math.random() * 25);
+});
+
+leftArrow.addEventListener('click', () => {
+  enterNumber = document.querySelector('.input-number');
+  if (enterNumber.value <= 0) {
+    enterNumber.value = 0;
+  } else {
+    enterNumber.value = +enterNumber.value - 1;
+  }
+  console.log(enterNumber.value);
+});
+
+rightArrow.addEventListener('click', () => {
+  enterNumber = document.querySelector('.input-number');
+  if (enterNumber.value >= 25) {
+    enterNumber.value = 25;
+  } else {
+    enterNumber.value = +enterNumber.value + 1;
+  }
+  console.log(enterNumber.value);
 });
 
 // localStorage
