@@ -268,8 +268,6 @@ body {
   }
 }
 @media (max-width: 380px) {
-  .info-box {
-  }
   .result-info {
     width: 250px;
     font-size: 17px;
