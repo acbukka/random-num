@@ -16,7 +16,6 @@ let enterNumber = document.querySelector('.input-number');
 let currentScore = 25;
 let currentNumber = 0;
 let highscoreNum = 0;
-console.log(currentRandom);
 
 checkBtn.addEventListener('click', () => {
   enterNumber = +document.querySelector('.input-number').value;
@@ -64,7 +63,6 @@ leftArrow.addEventListener('click', () => {
   } else {
     enterNumber.value = +enterNumber.value - 1;
   }
-  console.log(enterNumber.value);
 });
 
 rightArrow.addEventListener('click', () => {
@@ -74,7 +72,6 @@ rightArrow.addEventListener('click', () => {
   } else {
     enterNumber.value = +enterNumber.value + 1;
   }
-  console.log(enterNumber.value);
 });
 
 // localStorage
