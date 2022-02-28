@@ -59,7 +59,7 @@ againBtn.addEventListener('click', () => {
 leftArrow.addEventListener('click', () => {
   enterNumber = document.querySelector('.input-number');
   if (enterNumber.value <= 0) {
-    enterNumber.value = 0;
+    enterNumber.value = 25;
   } else {
     enterNumber.value = +enterNumber.value - 1;
   }
@@ -68,7 +68,7 @@ leftArrow.addEventListener('click', () => {
 rightArrow.addEventListener('click', () => {
   enterNumber = document.querySelector('.input-number');
   if (enterNumber.value >= 25) {
-    enterNumber.value = 25;
+    enterNumber.value = 0;
   } else {
     enterNumber.value = +enterNumber.value + 1;
   }
