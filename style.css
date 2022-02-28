@@ -1,0 +1,295 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: game;
+  src: url(/font/arcade.ttf);
+}
+
+body {
+  background-color: #222;
+  font-family: 'Press Start 2P', cursive;
+  color: #eee;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.top {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+.top-info__text {
+  text-align: center;
+  line-height: 30px;
+}
+.again-btn {
+  font-size: 30px;
+  padding: 17px 10px 17px 22px;
+  border: 2px solid #eee;
+  background-color: #eee;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.again-btn:hover,
+.check-btn:hover {
+  background-color: #222;
+  color: #eee;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-title {
+  margin-bottom: 100px;
+  font-size: 45px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.number-box {
+  position: relative;
+  margin-bottom: 130px;
+}
+.tire {
+  position: absolute;
+  content: '';
+  height: 5px;
+  top: 50%;
+  align-self: start;
+  left: calc(-50vw + 50%);
+  width: 100vw;
+  background-color: #eee;
+  z-index: -1;
+}
+.number {
+  position: relative;
+  text-align: center;
+  background: #eee;
+  width: 170px;
+  height: 110px;
+  padding: 20px 20px;
+  font-size: 70px;
+  color: #222;
+}
+
+.info-box {
+  width: 850px;
+  margin-left: 135px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.number-check,
+.input-number {
+  max-width: 200px;
+}
+.number-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-number {
+  padding: 40px 20px;
+  font-size: 35px;
+  background-color: transparent;
+  border: 3px solid #eee;
+  color: #eee;
+  height: 75px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.check-btn {
+  background-color: #eee;
+  color: #222;
+  font-size: 23px;
+  padding: 17px 10px 17px 15px;
+  border: 2px solid #eee;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.result-info {
+  font-size: 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+}
+.message {
+  margin-bottom: 75px;
+  position: relative;
+}
+.message-span,
+.score-span,
+.highscore-span {
+  position: absolute;
+  left: -45px;
+  top: -8px;
+}
+.score {
+  margin-bottom: 20px;
+  position: relative;
+}
+.highscore {
+  position: relative;
+}
+@media (max-width: 1080px) {
+  .info-box {
+    width: 760px;
+  }
+}
+@media (max-width: 930px) {
+  .info-box {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 830px) {
+  .info-box {
+    width: 600px;
+  }
+}
+
+@media (max-width: 800px) {
+  .info-box {
+    width: 550px;
+  }
+  .main-title {
+    font-size: 40px;
+    line-height: 70px;
+    margin-bottom: 70px;
+  }
+  .top {
+    margin-bottom: 65px;
+  }
+}
+@media (max-width: 630px) {
+  .info-box {
+    /* width: 600px; */
+    margin-left: 0px;
+  }
+}
+@media (max-width: 560px) {
+  .info-box {
+    width: 500px;
+  }
+  .result-info {
+    font-size: 19px;
+  }
+}
+@media (max-width: 530px) {
+  .info-box {
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .number-box {
+    margin-bottom: 30px;
+  }
+  .main-title {
+    margin-bottom: 30px;
+  }
+  .message {
+    margin-bottom: 20px;
+  }
+  .check-btn {
+    margin-bottom: 55px;
+    font-size: 19px;
+  }
+  .again-btn {
+    font-size: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .result-info {
+    font-size: 19px;
+  }
+  .again-btn {
+    font-size: 19px;
+  }
+}
+@media (max-width: 380px) {
+  .info-box {
+  }
+  .result-info {
+    width: 250px;
+    font-size: 17px;
+    margin-left: 60px;
+  }
+  .again-btn {
+    font-size: 19px;
+  }
+}
+@media (max-width: 330px) {
+  .result-info {
+    width: 250px;
+    font-size: 17px;
+    margin-left: 60px;
+  }
+  .again-btn {
+    font-size: 19px;
+  }
+  .main-title {
+    margin-bottom: 25px;
+    font-size: 35px;
+  }
+}
